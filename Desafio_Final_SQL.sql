@@ -15,7 +15,7 @@ INSERT INTO HEROI (nome,funcao,tamanho) VALUES
 Select * from HEROI;
 
 CREATE TABLE PLAYER(
-nick CHAR(25),
+nick CHAR(25) PRIMARY KEY,
 lane CHAR(3), CHECK(lane IN('top','mid','bot'))
 ,ranking VARCHAR(10)
 );
@@ -28,8 +28,8 @@ INSERT INTO PLAYER (nick,lane,ranking) VALUES
 Select * from PLAYER;
 
 CREATE TABLE DANO(
-DanoTotal int,
-nick_Player varchar(25) PRIMARY KEY,
+DanoTotal INT,
+Id INT PRIMARY KEY,
 nome_heroi varchar(25)
 );
 
